@@ -1,3 +1,4 @@
+ifeq ($(strip $(SONY_AOSP)),true)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -14,3 +15,4 @@ LOCAL_MODULE_CLASS := RECOVERY_EXECUTABLES
 LOCAL_MODULE_PATH := $(PRODUCT_OUT)/utilities
 LOCAL_PACK_MODULE_RELOCATIONS := false
 include $(BUILD_EXECUTABLE)
+endif

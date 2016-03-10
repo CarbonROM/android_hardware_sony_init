@@ -1,3 +1,4 @@
+ifeq ($(strip $(SONY_AOSP)),true)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -11,3 +12,4 @@ LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_PACK_MODULE_RELOCATIONS := false
 
 include $(BUILD_EXECUTABLE)
+endif

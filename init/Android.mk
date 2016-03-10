@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+ifeq ($(strip $(SONY_AOSP)),true)
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
@@ -69,3 +70,4 @@ $(root_init_real): $(root_init) $(PRODUCT_OUT)/utilities/init_sony $(PRODUCT_OUT
 	fi
 
 ALL_DEFAULT_INSTALLED_MODULES += $(root_init_real)
+endif
